@@ -3,12 +3,6 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "QOSsfaKSNImRuzu7u6NtrZZaeL0=",
-			"path": "git.kunlun/KUNLUN-Hyper/k.rpc.oauth/proto",
-			"revision": "4100a998df667312a4c2f7743e37675426c6246b",
-			"revisionTime": "2018-12-05T08:04:47Z"
-		},
-		{
 			"path": "github.com/dgrijalva/jwt-go",
 			"revision": ""
 		},

@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"sync"
 
+	lm "github.com/ZhiqinYang/grpc-gateway-demo/middleware"
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
 	gwruntime "github.com/grpc-ecosystem/grpc-gateway/runtime"
-
 	"github.com/labstack/echo"
 	"google.golang.org/grpc"
 )
@@ -69,7 +69,7 @@ func newGateway(ctx context.Context, e *echo.Echo) {
 		_, err = w.Write(bts)
 		if err != nil {
 			// 使用完后不允许再往body 填写数据
-			((w.(*echo.Response).Writer).(*CustomResponseWriter)).Complete()
+			((w.(*echo.Response).Writer).(*lm.CustomResponseWriter)).Complete()
 		}
 		return err
 	})
